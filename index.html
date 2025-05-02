@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Abinesh Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+<style>
+.myImg {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .myImg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/1.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Abinesh V</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://www.linkedin.com/in/abinesh-v-7496b32b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/Abinesh1702" class="linkedin"><i class="bi bi-github"></i></a>
+      <!-- <a href="#" class="facebook"><i class="bi bi-facebook"></i></a> -->
+      <a href="https://www.instagram.com/__itz_bee__42?utm_source=qr&igsh=MTM0cnFzMjFueXdlaw==
+      " class="instagram"><i class="bi bi-instagram"></i></a>
+
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#home" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#company_project"><i class="bi bi-images navicon"></i>Company's Projects</a></li>
+        <li><a href="#own_project"><i class="bi bi-hdd-stack navicon"></i>Own Projects</a></li>
+        <li><a href="#certification"><i class="bi bi-patch-check-fill me-2"></i> Certifications</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section dark-background">
+
+      <img src="assets/img/dev.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2 >Abinesh</h2>
+        <p>I'm <span class="typed text-warning " data-typed-items="Software Developer , Software Developer , Software Developer">Software Developer</span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Innovative Full Stack Developer with one year of hands-on experience in crafting dynamic web applications. Proficient in a diverse set of technologies, including HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, and ReactJS for front-end development, alongside Python and Django for robust back-end solutions. Skilled in database management with MySQL, I excel in creating responsive, user-friendly interfaces and implementing efficient server-side logic. Committed to continuous learning and collaboration, I am eager to tackle new challenges and contribute to impactful projects in a fast-paced environment.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content mt-5">
+            <h2>Software Developer</h2>
+            <p class=" py-3">
+              I am a Full Stack Developer with expertise in HTML, CSS, Boostrap , Tailwind CSS , JavaScript, ReactJS, Python, Django, and MySQL. I am passionate about building responsive web applications and solving complex problems. Always eager to learn and grow in the tech industry.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>abineshvijayakumar12@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>9600147651</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>17 Feb 2002</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master's</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chennai</span></li>
+                </ul>
+              </div>
+            </div>
+            <a class="btn btn-outline-primary" > <i class="bi bi-file-earmark-text-fill me-3"></i>Resume Download </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+            <div class="progress">
+              <span class="skill"><span>Tailwind CSS</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+            <div class="progress">
+              <span class="skill"><span>Bootstrap</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+            <div class="progress">
+              <span class="skill"><span>ReactJS</span> <i class="val">40%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+          </div>
+
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>JavaScript</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Python</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Django</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>MySQL</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Innovative Full Stack Developer with one year of hands-on experience in crafting dynamic web applications. Proficient in a diverse set of technologies, including HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, and ReactJS for front-end development, alongside Python and Django for robust back-end solutions. Skilled in database management with MySQL, I excel in creating responsive, user-friendly interfaces and implementing efficient server-side logic. Committed to continuous learning and collaboration, I am eager to tackle new challenges and contribute to impactful projects in a fast-paced environment.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>ABINESH</h4>
+              <p>Innovative Full Stack Developer with a year of experience in creating dynamic web applications. Proficient in HTML, CSS, JavaScript, ReactJS, Python, Django, and MySQL. Focused on building responsive interfaces and efficient server-side solutions, with a passion for continuous learning and collaboration.</p>
+              <ul>
+                <li>9600147651</li>
+                <li>abineshvijayakumar12@gmail.com</li>
+                <li>Chennai - 600069 </li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Computer Application (MCA) </h4>
+              <p>2022 - 2024</p>
+              <p>Sri Muthukumaran Institute of Technology</p>
+              <p>CGPA - 8 </p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Bachelor of Computer Science (BSC(CS))</h4>
+              <p>2019 - 2022</p>
+              <p>Apollo Arts & Science College</p>
+              <p>CGPA - 7.4 </p>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Skills</h3>
+            <div class="resume-item ">
+              <h4>Programming Languages</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>Tailwind CSS</li>
+                <li>JavaScript</li>
+                <li>React JS</li>
+                <li>Python</li>
+                <li>Django</li>
+                <li>MySQL</li>
+                <li>Git & Github</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Certifications</h3>
+            <div class="resume-item ">
+              <h4>Internship Certification</h4>
+              <p>Python Fullstack Development</p>
+              <p><b>Company :</b> Shiash Info Solution Pvt Ltd.</p>
+              <p><b>Duration :</b> March 2024 - May 2024 (3 Month)</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item ">
+              <h4>Course Certification</h4>
+              <div class="div">
+                <p><b><li>Python</li></b></p>
+                <p><b>Website :</b> Great Learning </p>
+                <p><b>Duration :</b> january 2024 (1 Month)</p>
+              </div>
+              <div class="div">
+                <p><b><li>FrontEnd Development</li></b></p>
+                <p><b>Application :</b> Sololearn </p>
+                <p><b>Duration :</b> June 2023 - August 2023 (3 Month)</p>
+              </div>
+              <div class="div">
+                <p><b><li>SQL</li></b></p>
+                <p><b>Website :</b> Geekster </p>
+                <p><b>Duration :</b> july 2024 (1 Month)</p>
+              </div>
+              <div class="div">
+                <p><b><li>Git & Github</li></b></p>
+                <p><b>Website :</b> Geekster </p>
+                <p><b>Duration :</b> August 2024 (1 Month)</p>
+              </div>
+            </div><!-- Edn Resume Item -->
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <h4>Kenshin Systems India Pvt Ltd - 1 Year</h4>
+            <div class="resume-item">
+              <h4>Ticketing Tool (HelpDesk)</h4>
+              <p>2025</p>
+              <ul>
+                <li class="mb-2">Web-based helpdesk in CodeIgniter for creating and managing tickets with priority, attachments, and custom fields.</li>
+                <li class="mb-2">Supports 2FA (Google Authenticator, Twilio OTP) and advanced filtering by date, reply status, and priority.</li>
+                <li class="mb-2">Role- and department-based reports with dynamic user lists and detailed filters.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>HRMS - Human Resource Management System </h4>
+              <p>2024 - 2025</p>
+              <ul>
+                <li>Led the development of the HRMS performance module, streamlining employee performance evaluation.</li>
+                <li>Designed workflows for employee self-assessment, HOD review, and HR hierarchy-based approvals.</li>
+                <li>Developed form-based evaluation processes with structured summaries and review mechanisms.</li>
+                <li>Implemented manual attendance and bulk upload functionalities to enhance data management efficiency.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+
+            <!-- own projects  -->
+
+            <h3 class="resume-title">OWN Projects</h3>
+            <div class="resume-item">
+              <h4>Kamatchi Carvings - Ecom Website   (<a href="https://github.com/Abinesh1702/Kamatchi-Carvings">Link</a>)</h4>
+              <p>1 Month</p>
+              <ul>
+                <li><b>Objective:</b> Aimed to create a responsive and visually appealing e-commerce platform for users.</li>
+                <li><b>Technologies Used:</b>HTML, CSS, Bootstrap, JavaScript, Python, Django, SQLite3</li>
+                <li><b>Functionality:</b>Developed a user-friendly interface for browsing products and managing a shopping cart.</li>
+                <li><b>Features:</b>Included product listings, search functionality, and user authentication.</li>
+                <li><b>Database:</b>Utilized SQLite3 for efficient data management and storage.</li>
+                <li><b>Payment Process:</b>Note that the project does not include a payment processing system.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>College Election , Manifestos and <br> <br> <span>QR Voting System</span> (<a href="https://github.com/Abinesh1702/College-EMQ">Link</a>) </h4>
+              <p>2 Week</p>
+              <ul>
+                <li><b>Objective:</b> Developed a web-based College Election System with manifesto pages, QR code voting, and a real-time leaderboard .</li>
+                <li><b>Technologies Used:</b>HTML, CSS, Tailwind CSS, JavaScript, Python, Django, and SQLite3.</li>
+                <li><b>Manifesto Page:</b>Admins create candidate pages with text, images, and unique QR codes for easy access.</li>
+                <li><b>QR Code Voting:</b>Each voting process generates a unique QR code for secure and convenient voting.Real-Time Leaderboard: Displays live vote counts with minimal latency.</li>
+                <li><b>Real-Time Leaderboard:</b>Displays live vote counts with minimal latency.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>Responsive Pizza Landing Page  (<a href="https://github.com/Abinesh1702/Responsive-Pizza-website">Link</a>) </h4>
+              <p>1 Month</p>
+              <ul>
+                <li><b>Objective:</b> Enhanced user engagement and provided a seamless browsing experience.</li>
+                <li><b>Technologies Used:</b> HTML, CSS, JavaScript .</li>
+                <li><b>Design:</b>Created an attractive, responsive layout for various devices.</li>
+                <li><b>Features:</b>Included interactive elements to showcase menu items.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- company project Section -->
+    <section id="company_project" class="portfolio section light-background py-2">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <div class="div">
+          <h2>Company's Projects</h2>
+          <div class="div">
+
+            <h3 style="text-align: center;" class="mt-5">Ticketing Tool (HelpDesk) - Team Leader</h3>
+            <p style="text-align: justify;">The Ticketing Tool (Helpdesk) is a comprehensive web-based support system designed to manage and streamline customer and internal support requests. It allows users to raise tickets for issues, track their status, and get timely resolutions. Agents or support staff can respond, update, and manage these tickets, ensuring efficient and organized communication.</p>
+            <div style="display: flex; justify-content: center; margin: 10px 0px;">
+              <img src="assets/img/6f company.png" alt="" style="width: 150px;">
+            </div>      
+            
+            <ul class="list-disc list-inside text-gray-600  text-left md:text-center">
+              <li class="mb-2"> <b>Ticket Management System:</b> <br> Web-based helpdesk built with CodeIgniter (PHP) for creating, viewing, and managing tickets with subject, priority, attachments, and custom fields.</li>
+              <li class="mb-2"> <b> Secure Authentication & Filtering:</b> <br> Supports 2FA via Google Authenticator and Twilio OTP. Allows filtering by date, reply status, and priority for efficient ticket handling.</li>
+              <li class="mb-2"> <b> Reports & Role-Based Access: </b> <br> Report module with filters for roles, departments, and users. User list updates dynamically based on selected role and department. </li>
+            </ul>
+            </div><!-- End Section Title -->
+          
+          <div class="container my-3">
+            <div class="row">
+                <!-- HTML Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-danger text-white w-100">
+                        <i class="fab fa-html5"></i> HTML
+                    </button>
+                </div>
+    
+                <!-- CSS Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-primary text-white w-100">
+                        <i class="fab fa-css3-alt"></i> CSS
+                    </button>
+                </div>
+    
+                <!-- Tailwind Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-info text-white w-100">
+                        <i class="fas fa-wind"></i> Bootstrap5
+                    </button>
+                </div>
+    
+                <!-- JavaScript Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-warning text-white w-100">
+                        <i class="fab fa-js"></i> JavaScript
+                    </button>
+                </div>
+    
+                <!-- Python Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-success text-white w-100">
+                        <i class="fab fa-python"></i> Python
+                    </button>
+                </div>
+    
+                <!-- SQLite3 Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-dark text-white w-100">
+                        <i class="fas fa-database"></i> SQLite3
+                    </button>
+                </div>
+    
+                <!-- Django Button (Using "D" as an alternative) -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-dark text-white w-100">
+                        <i class="fas fa-d"></i> Django
+                    </button>
+                </div>
+            </div>
+          <h3 style="text-align: center; margin-top: 10px;">HRMS - HRMS Performance Module Lead</h3>
+          <div style="display: flex; justify-content: center;">
+            <img src="assets/img/hrms.png" alt="" style="width: 200px;">
+          </div>
+          <ul class="mt-2">
+            <li>Led the development of the HRMS performance module, streamlining employee performance evaluation.</li>
+            <li>Designed workflows for employee self-assessment, HOD review, and HR hierarchy-based approvals.</li>
+            <li>Developed form-based evaluation processes with structured summaries and review mechanisms.</li>
+            <li>Implemented manual attendance and bulk upload functionalities to enhance data management efficiency.</li>
+            <li>Ensured scalability and accuracy in attendance tracking and performance assessments.
+            </li>
+            <li>Developed a leave application form in the LMS module to optimize leave request and approval processes.</li>
+          </ul>
+          <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+            Led the development of the HRMS performance module, ensuring seamless performance evaluation for a manufacturing company.
+            Designed and implemented workflows for employee self-assessment, HOD review, and HR hierarchy-based approvals.
+          </p>
+          <div class="container mt-4">
+            <div class="row">
+                <!-- HTML Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-danger text-white w-100">
+                        <i class="fab fa-html5"></i> HTML
+                    </button>
+                </div>
+    
+                <!-- CSS Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-primary text-white w-100">
+                        <i class="fab fa-css3-alt"></i> CSS
+                    </button>
+                </div>
+    
+                <!-- Tailwind Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-info text-white w-100">
+                        <i class="fas fa-wind"></i> Tailwind CSS
+                    </button>
+                </div>
+    
+                <!-- JavaScript Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-warning text-white w-100">
+                        <i class="fab fa-js"></i> JavaScript
+                    </button>
+                </div>
+    
+                <!-- Python Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-success text-white w-100">
+                        <i class="fab fa-python"></i> Python
+                    </button>
+                </div>
+    
+                <!-- SQLite3 Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-dark text-white w-100">
+                        <i class="fas fa-database"></i> SQLite3
+                    </button>
+                </div>
+    
+                <!-- Django Button (Using "D" as an alternative) -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-dark text-white w-100">
+                        <i class="fas fa-d"></i> Django
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+  
+      <!-- Company 6F HRMS Project -->
+      
+      </div>
+    </section><!-- /Portfolio Section -->
+
+    <!-- own project Section -->
+    <section id="own_project" class="services section ">
+
+      <!-- Section Title -->
+       <div class="div py-0">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Own Projects</h2>
+      </div><!-- End Section Title -->
+      <div class="container section-title py-0" data-aos="fade-up">
+          <div class="div">
+            <h3 style="text-align: center;" >Kamatchi Carvings – E-commerce Website (<a href="https://github.com/Abinesh1702/Kamatchi-Carvings">Link</a>)</h3>
+  
+            <ul class="list-disc list-inside text-gray-600  text-left md:text-center">
+              <li class="mb-2"> <b> Product Showcase (2D & 3D Models): </b> <br> A platform to display handcrafted wood carvings with support for both 2D images and interactive 3D models, giving customers a detailed view of each product.</li>
+              <li class="mb-2"> <b> Customer Interaction & Feedback:</b> <br> Users can submit feedback, make product inquiries, and interact with the team via integrated call and WhatsApp chat options for personalized support.</li>
+              <li class="mb-2"> <b> Order Placement (No Online Payment):  </b> <br>Customers can place orders directly through the website without any payment gateway. Orders are processed manually, allowing flexibility in pricing and custom requests. </li>
+            </ul>
+          </div><!-- End Section Title -->
+          
+          <div class="container mt-3 ">
+            <div class="row">
+                <!-- HTML Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-danger text-white w-100">
+                        <i class="fab fa-html5"></i> HTML
+                    </button>
+                </div>
+    
+                <!-- CSS Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-primary text-white w-100">
+                        <i class="fab fa-css3-alt"></i> CSS
+                    </button>
+                </div>
+    
+                <!-- Tailwind Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-info text-white w-100">
+                        <i class="fas fa-wind"></i> Bootstrap5
+                    </button>
+                </div>
+    
+                <!-- JavaScript Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-warning text-white w-100">
+                        <i class="fab fa-js"></i> JavaScript
+                    </button>
+                </div>
+    
+                <!-- Python Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-success text-white w-100">
+                        <i class="fab fa-python"></i> Python
+                    </button>
+                </div>
+    
+                <!-- SQLite3 Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-dark text-white w-100">
+                        <i class="fas fa-database"></i> SQLite3
+                    </button>
+                </div>
+    
+                <!-- Django Button (Using "D" as an alternative) -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-dark text-white w-100">
+                        <i class="fas fa-d"></i> Django
+                    </button>
+                </div>
+            </div>
+      <div class="container section-title" data-aos="fade-up">
+          <div class="div">
+            <h3 style="text-align: center;" >College Election – Manifestos & QR Voting System (<a href="https://github.com/Abinesh1702/College-EMQ">Link</a>)</h3>
+  
+            <ul class="list-disc list-inside text-gray-600  text-left md:text-center">
+              <li class="mb-2"> <b> Candidate & Manifesto Pages: </b> <br> Admins create dedicated candidate pages with text, images, and unique QR codes, making it easy for students to view manifestos before voting.</li>
+              <li class="mb-2"> <b>Secure QR-Based Voting:</b> <br> Each voter receives a unique QR code to cast their vote securely and conveniently through a web-based voting system.</li>
+              <li class="mb-2"> <b> Real-Time Leaderboard:  </b> <br>A live leaderboard displays vote counts with minimal latency, ensuring transparency and real-time election updates. </li>
+            </ul>
+          </div><!-- End Section Title -->
+          
+          <div class="container mt-3">
+            <div class="row">
+                <!-- HTML Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-danger text-white w-100">
+                        <i class="fab fa-html5"></i> HTML
+                    </button>
+                </div>
+    
+                <!-- CSS Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-primary text-white w-100">
+                        <i class="fab fa-css3-alt"></i> CSS
+                    </button>
+                </div>
+    
+                <!-- Tailwind Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-info text-white w-100">
+                        <i class="fas fa-wind"></i> Tailwind CSS
+                    </button>
+                </div>
+    
+                <!-- JavaScript Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-warning text-white w-100">
+                        <i class="fab fa-js"></i> JavaScript
+                    </button>
+                </div>
+    
+                <!-- Python Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-success text-white w-100">
+                        <i class="fab fa-python"></i> Python
+                    </button>
+                </div>
+    
+                <!-- SQLite3 Button -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-dark text-white w-100">
+                        <i class="fas fa-database"></i> SQLite3
+                    </button>
+                </div>
+    
+                <!-- Django Button (Using "D" as an alternative) -->
+                <div class="col-12 col-md-2 mb-4">
+                    <button class="btn btn-dark text-white w-100">
+                        <i class="fas fa-d"></i> Django
+                    </button>
+                </div>
+            </div>     
+        </div>
+      <div class="container section-title py-0" data-aos="fade-up">
+          <div class="div py-0">
+            <h3 style="text-align: center;" >Responsive Pizza Landing Page (<a href="https://github.com/Abinesh1702/Responsive-Pizza-website">Link</a>)</h3>
+  
+            <ul class="list-disc list-inside text-gray-600  text-left md:text-center">
+              <li class="mb-2"> <b> Attractive Design: </b> <br> Features a visually appealing layout with high-quality images, catchy headlines, and clear call-to-action buttons to attract users.</li>
+              <li class="mb-2"> <b>Fully Responsive: </b> <br>  Optimized for all devices using responsive web design, ensuring smooth user experience on desktops, tablets, and mobiles.</li>
+              <li class="mb-2"> <b> Smooth Navigation:  </b> <br>Includes key sections like menu, offers, contact, and order info with easy-to-navigate layout for better user engagement. </li>
+            </ul>
+          </div><!-- End Section Title -->
+          
+          <div class="container mt-3">
+            <div class="row">
+                <!-- HTML Button -->
+                <div class="col-12 col-md-2 ">
+                    <button class="btn btn-danger text-white w-100">
+                        <i class="fab fa-html5"></i> HTML
+                    </button>
+                </div>
+    
+                <!-- CSS Button -->
+                <div class="col-12 col-md-2 ">
+                    <button class="btn btn-primary text-white w-100">
+                        <i class="fab fa-css3-alt"></i> CSS
+                    </button>
+                </div>
+
+    
+                <!-- JavaScript Button -->
+                <div class="col-12 col-md-2 ">
+                    <button class="btn btn-warning text-white w-100">
+                        <i class="fab fa-js"></i> JavaScript
+                    </button>
+                </div>
+            </div>     
+          </div>
+    </section><!-- /Services Section -->
+
+    <section id="certification">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Certifications</h2>
+      </div><!-- End Section Title -->
+      <div class="container">
+      <div class="row ">
+        <div class="col-md-4 my-3">
+            <img class="myImg img-fluid" src="assets/img/certificates/1.jpg">
+        </div>
+        <div class="col-md-4 my-3">
+          <img class="myImg img-fluid" src="assets/img/certificates/7.jpg" >
+        </div>
+        <div class="col-md-4 my-3">
+          <img class="myImg img-fluid" src="assets/img/certificates/6.jpg">
+        </div>
+        <div class="col-md-4 my-3">
+          <img class="myImg img-fluid" src="assets/img/certificates/8.jpg" >
+        </div>
+        <div class="col-md-4 my-3">
+          <img class="myImg img-fluid" src="assets/img/certificates/5.jpg" >
+        </div>
+        <div class="col-md-4 my-3">
+          <img class="myImg img-fluid" src="assets/img/certificates/9.jpg" >
+        </div>
+        <div class="col-md-4 my-3">
+          <img class="myImg img-fluid" src="assets/img/certificates/4.jpg" >
+        </div>
+        <div class="col-md-4 my-3">
+          <img class="myImg img-fluid" src="assets/img/certificates/2.jpg" >
+        </div>
+    </div>
+  
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal" >
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+    </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-12">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>1/115 leelavathi nagar ,<br>
+                    Chikkarayapuram , <br>
+                    Chennai - 600 069 .
+                  </p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>9600147651</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>abineshvijayakumar12@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31100.135159975394!2d80.07618149893065!3d13.002721803820213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528aae21bb0af1%3A0xc0f8e364752be3c9!2sSikkarayapuram%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1738316237128!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+ 
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get all images with class "myImg"
+  var images = document.getElementsByClassName("myImg");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  
+  // Loop through all images and set up click event
+  for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+  </script>
+  
+    
+</body>
+
+</html>
